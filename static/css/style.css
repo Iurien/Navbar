@@ -1,0 +1,43 @@
+/* Настройки темной темы */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --btn-bg: #fff;
+    --btn-color: #000;
+    } /* Светлая тема */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --btn-bg: #333;
+    --btn-color: #fff;
+    } /* Темная тема */
+/* Кнопка теперь будет менять вид автоматически */
+.theme-btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}  /* Тема кнопки */
+/* В селекторе body лучше использовать переменные для всего контента */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход */
+    margin: 0;
+}
+
+/* конец настройек темной темы */
+
+/* фиксированная настройка панели навигации */
+.my-fixed-element {
+  position: fixed;
+  top: 0;
+  width: 100%; /* Обеспечивает охват всей ширины. */
+  /* При необходимости добавьте другие параметры стиля, такие как background-color, height, z-index. */
+}
+/* Добавьте отступы к основному содержимому, чтобы предотвратить наложение. */
+body {
+  padding-top: 60px; /* Присвойте значению значение, равное высоте вашего фиксированного элемента. */
+}
+/* конец фиксированной панели навигации */
